@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DermaFlash · DermaSense</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body data-protected="1"><nav id="nav"></nav><main><section><h2>DermaFlash</h2>
+ <div class="card"><h3>List a product</h3><div class="row">
+  <div><label>Name</label><input id="fN"></div>
+  <div><label>Category</label><input id="fC" placeholder="Serum, moisturiser…"></div>
+  <div><label>Packaging</label><select id="fP"><option>pump</option><option>tube</option><option>sealed</option><option>jar</option></select></div>
+  <div><label>Times used</label><input id="fU" type="number" min="0" value="0"></div>
+  <div><label>Original price</label><input id="fO" type="number" min="0" value="800"></div>
+  <div><label>Months of shelf life left</label><input id="fM" type="number" min="0" value="12"></div></div>
+  <label>Ingredients</label><textarea id="fI" rows="2"></textarea><br>
+  <button class="btn alt" onclick="est()">Check price</button> <button class="btn" onclick="list()">List it</button><div id="fOut"></div></div>
+ <div class="card"><h3>Matched to your skin</h3><button class="btn alt" onclick="market()">Show products for me</button><div id="mkt"></div></div>
+</section></main><footer id="foot"></footer>
+<script src="js/common.js"></script><script src="js/flash.js"></script></body></html>

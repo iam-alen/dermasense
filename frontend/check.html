@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Product check · DermaSense</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body data-protected="1"><nav id="nav"></nav><main><section><h2>Product check</h2>
+ <div class="card"><label>Ingredient list</label><textarea id="ings" rows="5" placeholder="Water, Glycerin, Niacinamide, Fragrance…"></textarea>
+ <label>Or upload a label photo</label><input type="file" id="label" accept="image/*" onchange="ocr()">
+ <br><br><button class="btn" onclick="check()">Check suitability</button><div id="checkOut"></div></div>
+ <div class="card"><h3>Do my products clash?</h3><p class="muted">One ingredient list per line.</p>
+ <textarea id="stack" rows="4" placeholder="Retinol serum: water, retinol…&#10;Glycolic toner: water, glycolic acid…"></textarea>
+ <br><br><button class="btn alt" onclick="clash()">Check for conflicts</button><div id="clashOut"></div></div>
+</section></main><footer id="foot"></footer>
+<script src="js/common.js"></script><script src="js/check.js"></script></body></html>

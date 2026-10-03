@@ -1,0 +1,46 @@
+
+:root{--bg:#fbeff5;--ink:#3a1535;--rose:#d94f7e;--blush:#fff;--sage:#7fa58b;--lilac:#ead9f5;--mute:#7b5d78;--line:#f0d3e1}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 Figtree,sans-serif;color:var(--ink);background:radial-gradient(1000px 500px at 85% -10%,#f6d3e4,transparent),radial-gradient(800px 500px at -10% 30%,var(--lilac),transparent),var(--bg);min-height:100vh}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;margin:0;line-height:1.05}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);font-weight:700}h2{font-size:2.2rem}h3{font-size:1.4rem}
+nav{display:flex;gap:6px;align-items:center;padding:14px 5vw;position:sticky;top:0;background:#fbeff5e6;backdrop-filter:blur(8px);z-index:5;flex-wrap:wrap}
+.logo{font:700 1.7rem 'Cormorant Garamond',serif;margin-right:auto}.logo i{color:var(--rose)}
+nav a{border:0;background:none;font:500 .95rem Figtree;color:var(--mute);padding:8px 14px;border-radius:99px;cursor:pointer}
+nav a.on,nav a:hover{background:var(--ink);color:#fff}
+main{padding:0 5vw 80px;max-width:1100px;margin:auto}
+section{padding-top:34px}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:30px 0}
+.hero p{font-size:1.15rem;color:var(--mute);max-width:46ch}
+.btn{border:0;background:var(--rose);color:#fff;font:600 1rem Figtree;padding:13px 26px;border-radius:99px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #d94f7e55}.btn.alt{background:var(--sage)}
+.orb{aspect-ratio:1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:linear-gradient(145deg,#f7b9d0,#ead9f5 60%,#cfe5d6);display:grid;place-items:center;position:relative;animation:morph 9s ease-in-out infinite}
+@keyframes morph{50%{border-radius:55% 45% 45% 55%/45% 55% 45% 55%}}
+.orb span{font:italic 500 1.5rem 'Cormorant Garamond',serif;text-align:center;padding:30px}
+@media(prefers-reduced-motion:reduce){.orb{animation:none}}
+.card{background:var(--blush);border:1px solid var(--line);border-radius:26px;padding:26px;margin-top:18px;box-shadow:0 14px 40px #b0447415}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card.tile{border-radius:26px 26px 26px 6px;cursor:pointer}.card.tile:hover{background:var(--lilac)}
+label{display:block;font-weight:600;font-size:.9rem;margin:14px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:12px 16px;border:1.5px solid var(--line);border-radius:16px;background:#fffafc;color:var(--ink)}
+:focus-visible{outline:3px solid var(--rose);outline-offset:2px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.chip{display:inline-block;background:var(--lilac);padding:5px 14px;border-radius:99px;margin:4px 6px 0 0;font-size:.9rem}
+.chip.g{background:#d5ebdc}.chip.r{background:#fbd0dd}
+.score{font:700 4rem 'Cormorant Garamond',serif;color:var(--rose)}
+.alert{background:#fff1e0;border-left:5px solid #e8963a;padding:14px 18px;border-radius:6px 16px 16px 6px;margin-top:14px}
+.muted{color:var(--mute);font-size:.92rem}ul{padding-left:20px}
+.empty{color:var(--mute);font-style:italic}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.orb{max-width:260px}}
+
+nav a{text-decoration:none;white-space:nowrap}
+nav a.logo{color:var(--ink);padding:0;margin-right:auto}nav a.logo:hover{background:none;color:var(--ink)}
+nav a.cta{background:var(--rose);color:#fff}nav a.cta:hover{background:var(--ink)}
+a.btn{display:inline-block;text-decoration:none}a.card{display:block;text-decoration:none;color:inherit}
+.auth{max-width:460px;margin:30px auto}.auth .btn{width:100%;margin-top:22px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:20px;counter-reset:s}
+.steps div{padding:22px;border-radius:26px;background:#fff;border:1px solid var(--line);counter-increment:s}
+.steps div::before{content:counter(s);font:700 2.6rem 'Cormorant Garamond',serif;color:var(--rose);line-height:1}
+.band{margin-top:60px;padding:48px;border-radius:44px 44px 44px 8px;background:linear-gradient(135deg,var(--ink),#6a2a5e);color:#fff}
+.band p{color:#ecd8ea;max-width:52ch}.band .btn{background:#fff;color:var(--ink)}
+footer{padding:30px 5vw;text-align:center;color:var(--mute);font-size:.9rem}

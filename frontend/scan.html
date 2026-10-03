@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Skin scan · DermaSense</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
+<body data-protected="1"><nav id="nav"></nav><main><section><h2>Your skin profile</h2>
+ <div class="card"><label>Upload a front-facing photo in daylight</label><input type="file" id="face" accept="image/*">
+ <br><br><button class="btn" onclick="scan()">Analyse my skin</button>
+ <div id="scanOut"></div></div>
+ <div class="card"><h3>Fine-tune your profile</h3><div class="row">
+  <div><label>Skin type</label><select id="stype"><option>Oily</option><option selected>Combination</option><option>Dry/Normal</option></select></div>
+  <div><label>Concerns</label><input id="conc" placeholder="Acne, Dark spots, Redness, Dryness"></div></div>
+  <div class="row"><div><label>Allergies</label><input id="alg" placeholder="e.g. fragrance, lanolin"></div>
+  <div><label>Ingredients to avoid</label><input id="avd" placeholder="e.g. alcohol, coconut oil"></div></div>
+  <br><button class="btn alt" onclick="routine()">Build my routine</button><div id="routineOut"></div></div>
+</section></main><footer id="foot"></footer>
+<script src="js/common.js"></script><script src="js/scan.js"></script></body></html>
